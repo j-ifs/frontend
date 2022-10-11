@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="./stylelist.css">
+    <title>Formulário</title>
+</head>
+
+<body>
+        <div class="form">
+          <div class="gender-group">
+            <div class="voltar-button">
+              <button><a href="./cadadm.html">Cadastrar administrador</a></button>
+            </div>
+            <div class="voltar-button">
+              <button><a href="./mainadm.html">Voltar</a></button>
+            </div>
+          </div>
+          <br>
+          <table id="example" class="display" style="width:100%">
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Usuário</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>pedro</td>
+                    <td>pedroadm</td>
+                </tr>
+            </tbody>
+          </table>
+          <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+          <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+          <script>
+            $(document).ready(function () {
+              $('#example').DataTable();
+            })
+          </script>
+        </div>
+    </div>
+</body>
+
+</html>

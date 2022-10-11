@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./stylejog.css" />
+    <title>Formulário</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="form-image">
+        <img src="./assets/jifs-logo.png" alt="Logo do JIFS" />
+      </div>
+      <div class="form">
+        <form action="#">
+          <div class="form-header">
+            <div class="title">
+              <h1>Cadastrar Jogador</h1>
+            </div>
+            <div class="voltar-button">
+              <button><a href="./mainadm.html">Voltar</a></button>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <div class="input-box">
+              <label for="firstname">Nome</label>
+              <input
+                id="firstname"
+                type="text"
+                name="firstname"
+                placeholder="Digite o nome"
+                required
+              />
+            </div>
+
+            <div class="input-box">
+              <label for="number">Matrícula</label>
+              <input
+                id="number"
+                type="tel"
+                name="number"
+                placeholder="xxxxxxxxxx"
+                required
+              />
+            </div>
+
+            <div class="input-box">
+              <label for="data_nasc"><b>Data de nascimento: </b></label>
+              <input type="date" name="data_nasc" id="data_nasc" required />
+            </div>
+          </div>
+          <div class="gender-inputs">
+            <div class="title">
+              <h6>Curso</h6>
+            </div>
+
+            <div class="group">
+              <div class="input">
+                <input id="iinf" type="radio" name="curso" checked />
+                <label for="iinf">Informática</label>
+              </div>
+
+              <div class="input">
+                <input id="iqui" type="radio" name="curso" />
+                <label for="iqui">Química</label>
+              </div>
+
+              <div class="input">
+                <input id="ieln" type="radio" name="curso" />
+                <label for="ieln">Eletrônica</label>
+              </div>
+
+              <div class="input">
+                <input id="ielt" type="radio" name="curso" />
+                <label for="ielt">Eletrotécnica</label>
+              </div>
+
+              <div class="input">
+                <input id="iedf" type="radio" name="curso" />
+                <label for="iedf">Edificações</label>
+              </div>
+
+              <div class="input">
+                <input id="ialm" type="radio" name="curso" />
+                <label for="ialm">Alimentos</label>
+              </div>
+            </div>
+          </div>
+          <br />
+          <div class="gender-inputs">
+            <div class="title">
+              <h6>Turma</h6>
+            </div>
+
+            <div class="group">
+              <div class="input">
+                <input id="primeiro" type="radio" name="turma" checked />
+                <label for="primeiro">1º Ano</label>
+              </div>
+
+              <div class="input">
+                <input id="segundo" type="radio" name="turma" />
+                <label for="segundo">2º Ano</label>
+              </div>
+
+              <div class="input">
+                <input id="terceiro" type="radio" name="turma" />
+                <label for="terceiro">3º Ano</label>
+              </div>
+            </div>
+          </div>
+          <br />
+          <div class="title">
+            <h6>Modalidades</h6>
+          </div>
+
+          <div class="group">
+            <div class="input">
+              <input id="futsal" type="checkbox" name="futsal" />
+              <label for="futsal">Futsal</label>
+            </div>
+
+            <div class="input">
+              <input id="volei" type="checkbox" name="volei" />
+              <label for="volei">Vôlei</label>
+            </div>
+
+            <div class="input">
+              <input id="basquete" type="checkbox" name="basquete" />
+              <label for="basquete">Basquete</label>
+            </div>
+          </div>
+
+          <div class="group">
+            <div class="input">
+              <input id="corrida" type="checkbox" name="corrida" />
+              <label for="corrida">Corrida</label>
+            </div>
+            <div class="input">
+              <input id="xadrez" type="checkbox" name="xadrez" />
+              <label for="xadrez">Xadrez</label>
+            </div>
+
+            <div class="input">
+              <input id="queimado" type="checkbox" name="queimado" />
+              <label for="queimado">Queimado</label>
+            </div>
+          </div>
+
+          <div class="group">
+            <div class="input">
+              <input id="handebol" type="checkbox" name="handebol" />
+              <label for="handebol">Handebol</label>
+            </div>
+
+            <div class="input">
+              <input id="toto" type="checkbox" name="toto" />
+              <label for="toto">Totó</label>
+            </div>
+
+            <div class="input">
+              <input id="mesa" type="checkbox" name="mesa" />
+              <label for="mesa">Tênis de Mesa</label>
+            </div>
+          </div>
+
+          <br />
+
+          <div class="title">
+            <h6>Vai jogar por outra turma?</h6>
+          </div>
+          <div class="group">
+            <div class="input">
+              <input id="sim" type="radio" name="sn" onclick="enable()" />
+              <label for="sim">Sim</label>
+            </div>
+
+            <div class="input">
+              <input id="nao" type="radio" name="sn" checked onclick="disable()" />
+              <label for="nao">Não</label>
+            </div>
+          </div>
+
+          <br />
+
+          <div class="group">
+            <div class="input-box">
+              <label for="outraturma"
+                >Digite aqui as turmas e os respectivos esportes pelas quais
+                jogará</label
+              >
+              <input
+                id="outraturma"
+                type="text"
+                name="outraturma"
+                placeholder="Ex: Basquete por Eletrônica"
+                disabled
+              />
+            </div>
+          </div>
+
+          <div class="continue-button">
+            <button><a href="#">Continuar</a></button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>

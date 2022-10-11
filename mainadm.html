@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JIFS</title>
+    <link rel="stylesheet" href="./stylemainadm.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav id="navigation">
+      <div class="wrapper">
+        <a class="logo" href="#home">
+          <img src="./assets/ifs.png" width="175" height="50" alt="" />
+        </a>
+
+        <div class="menu">
+          <ul>
+            <li>
+              <a onclick="closeMenu()" href="./listadm.html">Administrador</a>
+            </li>
+            <li><a onclick="closeMenu()" href="./listjog.html">Jogador</a></li>
+            <li>
+              <a onclick="closeMenu()" href="./listrep.html">Representante</a>
+            </li>
+          </ul>
+
+          <a
+            class="button"
+            onclick="closeMenu()"
+            href="./frontend-main/login.html"
+            >SAIR</a
+          >
+        </div>
+
+        <button
+          aria-expanded="false"
+          aria-label="Abrir menu"
+          onclick="openMenu()"
+          class="open-menu"
+        >
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10 20H30"
+              stroke="#00856F"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M10 12H30"
+              stroke="#00856F"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M18 28L30 28"
+              stroke="#00856F"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <button
+          aria-expanded="true"
+          aria-label="Fechar menu"
+          onclick="closeMenu()"
+          class="close-menu"
+        >
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M30 10L10 30M10 10L30 30"
+              stroke="#FFFAF1"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+    </nav>
+    <section id="home">
+      <div class="wrapper">
+        <div class="col-a">
+          <header>
+            <h4>BEM VINDO(A) AO SISTEMA DO JIFS 22</h4>
+            <h1>Jogos de Integração</h1>
+          </header>
+          <div class="content">
+            <p>
+              O evento tem como principal objetivo integrar os estudantes do
+              ensino médio por meio do desporto educacional, fazendo-os
+              compreender a importância da prática de atividades esportivas
+            </p>
+          </div>
+        </div>
+        <div class="col-b">
+          <img src="./assets/jifs-logo.png" alt="Logo do JIFS" />
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <h3>+500</h3>
+            <p>Alunos participantes</p>
+          </div>
+
+          <div class="stat">
+            <h3>+7</h3>
+            <p>Modalidades disponíveis</p>
+          </div>
+
+          <div class="stat">
+            <h3>+10</h3>
+            <p>Anos de JIFS</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="wrapper">
+        <div class="col-a">
+          <a class="logo" href="#home">
+            <img src="./assets/ifs.png" width="350" height="100" alt="" />
+          </a>
+          <p>
+            ©2022 JIFS.<br />
+            Todos os direitos reservados.
+          </p>
+        </div>
+
+        <div class="col-b"></div>
+      </div>
+    </footer>
+    <!--Scroll Reveal-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
