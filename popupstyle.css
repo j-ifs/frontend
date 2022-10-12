@@ -1,0 +1,24 @@
+.swal-modal{
+    background: hsl(148, 23%, 89%);
+  }
+  
+  .swal-title{
+    color: black;
+  }
+  
+  .swal-text{
+    color: black;
+  }
+  
+  .swal-button{
+    background: #499533;
+  }
+  
+  .swal-icon--success__hide-corners {
+    background: none !important;
+  }
+  
+  .swal-icon--success:before,
+  .swal-icon--success:after {
+    background: none !important;
+  }
