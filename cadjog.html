@@ -20,7 +20,7 @@
               <h1>Cadastrar Jogador</h1>
             </div>
             <div class="voltar-button">
-              <button><a href="./mainadm.html">Voltar</a></button>
+              <button disabled><a href="./mainadm.html">Voltar</a></button>
             </div>
           </div>
 
@@ -48,165 +48,41 @@
             </div>
 
             <div class="input-box">
-              <label for="data_nasc"><b>Data de nascimento: </b></label>
+              <label for="data_nasc"><b>Data de nascimento:</b></label>
               <input type="date" name="data_nasc" id="data_nasc" required />
             </div>
           </div>
-          <div class="gender-inputs">
-            <div class="title">
-              <h6>Curso</h6>
+
+            <div class="turma-group">
+              <label for="turma" class="title"><h6>Turma</h6></label>
+                <select id="turma" name="turma">
+                  <option value="inf1">1º Informática</option>
+                  <option value="inf2">2º Informática</option>
+                  <option value="inf3">3º Informática</option>
+                  <option value="qui1">1º Química</option>
+                  <option value="qui2">2º Química</option>
+                  <option value="qui3">3º Química</option>
+                  <option value="eln1">1º Eletrônica</option>
+                  <option value="eln2">2º Eletrônica</option>
+                  <option value="eln3">3º Eletrônica</option>
+                  <option value="elt1">1º Eletrotécnica</option>
+                  <option value="elt2">2º Eletrotécnica</option>
+                  <option value="elt3">3º Eletrotécnica</option>
+                  <option value="edf1">1º Edificações</option>
+                  <option value="edf2">2º Edificações</option>
+                  <option value="edf3">3º Edificações</option>
+                  <option value="alm1">1º Alimentos</option>
+                  <option value="alm2">2º Alimentos</option>
+                  <option value="alm3">3º Alimentos</option>
+                </select>
             </div>
-
-            <div class="group">
-              <div class="input">
-                <input id="iinf" type="radio" name="curso" checked />
-                <label for="iinf">Informática</label>
-              </div>
-
-              <div class="input">
-                <input id="iqui" type="radio" name="curso" />
-                <label for="iqui">Química</label>
-              </div>
-
-              <div class="input">
-                <input id="ieln" type="radio" name="curso" />
-                <label for="ieln">Eletrônica</label>
-              </div>
-
-              <div class="input">
-                <input id="ielt" type="radio" name="curso" />
-                <label for="ielt">Eletrotécnica</label>
-              </div>
-
-              <div class="input">
-                <input id="iedf" type="radio" name="curso" />
-                <label for="iedf">Edificações</label>
-              </div>
-
-              <div class="input">
-                <input id="ialm" type="radio" name="curso" />
-                <label for="ialm">Alimentos</label>
-              </div>
-            </div>
-          </div>
-          <br />
-          <div class="gender-inputs">
-            <div class="title">
-              <h6>Turma</h6>
-            </div>
-
-            <div class="group">
-              <div class="input">
-                <input id="primeiro" type="radio" name="turma" checked />
-                <label for="primeiro">1º Ano</label>
-              </div>
-
-              <div class="input">
-                <input id="segundo" type="radio" name="turma" />
-                <label for="segundo">2º Ano</label>
-              </div>
-
-              <div class="input">
-                <input id="terceiro" type="radio" name="turma" />
-                <label for="terceiro">3º Ano</label>
-              </div>
-            </div>
-          </div>
-          <br />
-          <div class="title">
-            <h6>Modalidades</h6>
-          </div>
-
-          <div class="group">
-            <div class="input">
-              <input id="futsal" type="checkbox" name="futsal" />
-              <label for="futsal">Futsal</label>
-            </div>
-
-            <div class="input">
-              <input id="volei" type="checkbox" name="volei" />
-              <label for="volei">Vôlei</label>
-            </div>
-
-            <div class="input">
-              <input id="basquete" type="checkbox" name="basquete" />
-              <label for="basquete">Basquete</label>
-            </div>
-          </div>
-
-          <div class="group">
-            <div class="input">
-              <input id="corrida" type="checkbox" name="corrida" />
-              <label for="corrida">Corrida</label>
-            </div>
-            <div class="input">
-              <input id="xadrez" type="checkbox" name="xadrez" />
-              <label for="xadrez">Xadrez</label>
-            </div>
-
-            <div class="input">
-              <input id="queimado" type="checkbox" name="queimado" />
-              <label for="queimado">Queimado</label>
-            </div>
-          </div>
-
-          <div class="group">
-            <div class="input">
-              <input id="handebol" type="checkbox" name="handebol" />
-              <label for="handebol">Handebol</label>
-            </div>
-
-            <div class="input">
-              <input id="toto" type="checkbox" name="toto" />
-              <label for="toto">Totó</label>
-            </div>
-
-            <div class="input">
-              <input id="mesa" type="checkbox" name="mesa" />
-              <label for="mesa">Tênis de Mesa</label>
-            </div>
-          </div>
-
           <br />
 
-          <div class="title">
-            <h6>Vai jogar por outra turma?</h6>
+          <div id="buttondiv" class="continue-button">
+            <button><a aria-disabled="true">Continuar</a></button>
           </div>
-          <div class="group">
-            <div class="input">
-              <input id="sim" type="radio" name="sn" onclick="enable()" />
-              <label for="sim">Sim</label>
-            </div>
-
-            <div class="input">
-              <input id="nao" type="radio" name="sn" checked onclick="disable()" />
-              <label for="nao">Não</label>
-            </div>
-          </div>
-
-          <br />
-
-          <div class="group">
-            <div class="input-box">
-              <label for="outraturma"
-                >Digite aqui as turmas e os respectivos esportes pelas quais
-                jogará</label
-              >
-              <input
-                id="outraturma"
-                type="text"
-                name="outraturma"
-                placeholder="Ex: Basquete por Eletrônica"
-                disabled
-              />
-            </div>
-          </div>
-
-          <div class="continue-button">
-            <button><a href="#">Continuar</a></button>
-          </div>
-        </form>
-      </div>
+        </div>
+      </form>
     </div>
     <script src="./main.js"></script>
   </body>
