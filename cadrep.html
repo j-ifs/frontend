@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./stylerep.css">
+    <link rel="stylesheet" href="./styleform.css">
     <title>Formulário</title>
 </head>
 
@@ -21,7 +21,7 @@
                         <h1>Cadastrar representante</h1>
                     </div>
                     <div class="voltar-button">
-                        <button><a href="./mainadm.html">Voltar</a></button>
+                        <button disabled><a href="./mainadm.html">Voltar</a></button>
                     </div>
                 </div>
 
@@ -31,8 +31,6 @@
                         <input id="firstname" type="text" name="firstname" placeholder="Digite o nome" required>
                     </div>
                      
-                    
-
                     <div class="input-box">
                         <label for="number">Matrícula</label>
                         <input id="number" type="tel" name="number" placeholder="xxxxxxxxxx" required>
@@ -42,71 +40,35 @@
                         <label for="password">Senha</label>
                         <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
                     </div>
-
-                </div>
-                <div class="gender-inputs">
-                    <div class="title">
-                        <h6>Curso</h6>
-                    </div>
-
-                    <div class="group">
-                        <div class="input">
-                            <input id="iinf" type="radio" name="gender">
-                            <label for="iinf">Infomatica</label>
-                        </div>
-
-                        <div class="input">
-                            <input id="iqui" type="radio" name="gender">
-                            <label for="iqui">Química</label>
-                        </div>
-
-                        <div class="input">
-                            <input id="ieln" type="radio" name="gender">
-                            <label for="ieln">Eletronica</label>
-                        </div>
-
-                        <div class="input">
-                            <input id="ielt" type="radio" name="gender">
-                            <label for="ielt">Eletrotecnica</label>
-                        </div>
-
-                        <div class="input">
-                            <input id="iedf" type="radio" name="gender">
-                            <label for="iedf">Edificações</label>
-                        </div>
-
-                        <div class="input">
-                            <input id="ialm" type="radio" name="gender">
-                            <label for="ialm">Alimentos</label>
-                        </div>
-                    </div>
-                </div>
-            <br>
-                <div class="gender-inputs" >
-                    <div class="title">
-                        <h6>Turma</h6>
-                    </div>
-
-                    <div class="group">
-                        <div class="input">
-                            <input id="primeiro" type="radio" name="gender">
-                            <label for="primeiro">1º Ano</label>
-                        </div>
-
-                        <div class="input">
-                            <input id="segundo" type="radio" name="gender">
-                            <label for="segundo">2º Ano</label>
-                        </div>
-
-                        <div class="input">
-                            <input id="terceiro" type="radio" name="gender">
-                            <label for="terceiro">3º Ano</label>
-                        </div>
-                    </div>
                 </div>
                 
+                <div class="turma-group">
+                    <label for="turma" class="title"><h6>Turma</h6></label>
+                      <select id="turma" name="turma">
+                        <option value="inf1">1º Informática</option>
+                        <option value="inf2">2º Informática</option>
+                        <option value="inf3">3º Informática</option>
+                        <option value="qui1">1º Química</option>
+                        <option value="qui2">2º Química</option>
+                        <option value="qui3">3º Química</option>
+                        <option value="eln1">1º Eletrônica</option>
+                        <option value="eln2">2º Eletrônica</option>
+                        <option value="eln3">3º Eletrônica</option>
+                        <option value="elt1">1º Eletrotécnica</option>
+                        <option value="elt2">2º Eletrotécnica</option>
+                        <option value="elt3">3º Eletrotécnica</option>
+                        <option value="edf1">1º Edificações</option>
+                        <option value="edf2">2º Edificações</option>
+                        <option value="edf3">3º Edificações</option>
+                        <option value="alm1">1º Alimentos</option>
+                        <option value="alm2">2º Alimentos</option>
+                        <option value="alm3">3º Alimentos</option>
+                      </select>
+                  </div>
+                <br />
+                
                 <div class="continue-button">
-                    <button><a href="#">Continuar</a> </button>
+                    <button><a aria-disabled="true">Continuar</a> </button>
                 </div>
             </form>
         </div>
