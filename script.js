@@ -1,6 +1,7 @@
 import {loginSuccess, loginError} from './popup.js'
 
 var formField = document.querySelector(".formLogin")
+const url = "http://jifs.freetzi.com/api"
 
 function loginRequiriments(event){
 
@@ -9,11 +10,9 @@ function loginRequiriments(event){
 
   event.preventDefault();
 
-  axios.post('/api/user/login.php', {
-    user: {
-      username: usernameValue,
-      password: passwordValue
-    }
+  axios.post(url+'/user/login.php', {
+    username: usernameValue,
+    password: passwordValue
   })
   .then(function (response) {
     loginSuccess()
