@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styleform.css">
+    <link rel="stylesheet" href="popupstyle.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Formulário</title>
 </head>
 
@@ -16,7 +19,7 @@
             <img src="./assets/jifs-logo.png" alt="Logo do JIFS">
         </div>
         <div class="form">
-            <form action="#" autocomplete="off">
+            <form action="#" autocomplete="off" id="formRep" method="post">
                 <div class="form-header">
                     <div class="title">
                         <h1>Cadastrar representante</h1>
@@ -46,33 +49,34 @@
                 <div class="turma-group">
                     <label for="turma" class="title"><h6>Turma</h6></label>
                       <select id="turma" name="turma">
-                        <option value="inf1">1º Informática</option>
-                        <option value="inf2">2º Informática</option>
-                        <option value="inf3">3º Informática</option>
-                        <option value="qui1">1º Química</option>
-                        <option value="qui2">2º Química</option>
-                        <option value="qui3">3º Química</option>
-                        <option value="eln1">1º Eletrônica</option>
-                        <option value="eln2">2º Eletrônica</option>
-                        <option value="eln3">3º Eletrônica</option>
-                        <option value="elt1">1º Eletrotécnica</option>
-                        <option value="elt2">2º Eletrotécnica</option>
-                        <option value="elt3">3º Eletrotécnica</option>
-                        <option value="edf1">1º Edificações</option>
-                        <option value="edf2">2º Edificações</option>
-                        <option value="edf3">3º Edificações</option>
-                        <option value="alm1">1º Alimentos</option>
-                        <option value="alm2">2º Alimentos</option>
-                        <option value="alm3">3º Alimentos</option>
+                        <option value="1IINF">1º Informática</option>
+                        <option value="2IINF">2º Informática</option>
+                        <option value="3IINF">3º Informática</option>
+                        <option value="1IQUI">1º Química</option>
+                        <option value="2IQUI">2º Química</option>
+                        <option value="3IQUI">3º Química</option>
+                        <option value="1IELN">1º Eletrônica</option>
+                        <option value="2IELN">2º Eletrônica</option>
+                        <option value="3IELN">3º Eletrônica</option>
+                        <option value="1IELT">1º Eletrotécnica</option>
+                        <option value="2IELT">2º Eletrotécnica</option>
+                        <option value="3IELT">3º Eletrotécnica</option>
+                        <option value="1IEDF">1º Edificações</option>
+                        <option value="2IEDF">2º Edificações</option>
+                        <option value="3IEDF">3º Edificações</option>
+                        <option value="1IALM">1º Alimentos</option>
+                        <option value="2IALM">2º Alimentos</option>
+                        <option value="3IALM">3º Alimentos</option>
                       </select>
                   </div>
                 
                 <div class="continue-button">
-                    <button><a aria-disabled="true">Continuar</a> </button>
+                    <button id="botao"><a aria-disabled="true">Continuar</a> </button>
                 </div>
             </form>
         </div>
     </div>
+    <script src="cadrep.js" type="module"></script>
 </body>
 
 </html>
