@@ -87,6 +87,10 @@ body {
   border-radius: 10px;
 }
 
+select {
+  font-weight: 500;
+}
+
 .input-group {
   display: flex;
   justify-content: space-between;
@@ -139,7 +143,7 @@ body {
   gap: 0.6rem;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 1rem 0;
+  padding: 0 0 1rem;
   margin: 0 0 0.6rem;
 }
 
