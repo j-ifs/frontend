@@ -6,6 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./styleform.css" />
+  <link rel="stylesheet" href="popupstyle.css">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
   <title>Formulário</title>
 </head>
 
@@ -15,7 +21,7 @@
       <img src="./assets/jifs-logo.png" alt="Logo do JIFS" />
     </div>
     <div class="form">
-      <form action="#" autocomplete="off">
+      <form action="#" autocomplete="off" method="post">
         <div class="form-header">
           <div class="title">
             <h1>Inscrever Jogador</h1>
@@ -30,7 +36,7 @@
           <div class="title">
             <h6>Jogador</h6>
           </div>
-          <select name="jog" id="jog">
+          <select name="jog" id="jog" class="jog">
             <!---axios aqui--->
           </select>
         </div>
@@ -39,7 +45,8 @@
           <div class="title">
             <h6>Turma</h6>
           </div>
-            <select id="turma" name="turma">
+            <select id="turma" name="turma" class="turma">
+              <option></option>
               <option value="1IINF">1º Informática</option>
               <option value="2IINF">2º Informática</option>
               <option value="3IINF">3º Informática</option>
@@ -65,63 +72,19 @@
           <h6>Modalidades</h6>
         </div>
 
-        <div class="sports-group">
-
-          <div class="input">
-            <input id="futsal" type="radio" value="futsal" name="sport" checked />
-            <label for="futsal">Futsal</label>
-          </div>
-
-          <div class="input">
-            <input id="volei" type="radio" value="volei" name="sport" />
-            <label for="volei">Vôlei</label>
-          </div>
-
-          <div class="input">
-            <input id="basquete" type="radio" value="basquete" name="sport" />
-            <label for="basquete">Basquete</label>
-          </div>
-
-          <div class="input">
-            <input id="corrida" type="radio" value="corrida" name="sport" />
-            <label for="corrida">Corrida</label>
-          </div>
-
-          <div class="input">
-            <input id="xadrez" type="radio" value="xadrez" name="sport" />
-            <label for="xadrez">Xadrez</label>
-          </div>
-        </div>
-
-        <div class="sports-group">
-          <div class="input">
-            <input id="queimado" type="radio" value="queimado" name="sport" />
-            <label for="queimado">Queimado</label>
-          </div>
-
-          <div class="input">
-            <input id="handebol" type="radio" value="handebol" name="sport" />
-            <label for="handebol">Handebol</label>
-          </div>
-
-          <div class="input">
-            <input id="toto" type="radio" value="toto" name="sport" />
-            <label for="toto">Totó</label>
-          </div>
-
-          <div class="input">
-            <input id="mesa" type="radio" value="mesa" name="sport" />
-            <label for="mesa">Tênis de Mesa</label>
-          </div>
+        <div class="turma-group">
+          <select name="sport" id="sport" class="sport">
+            
+          </select>
         </div>
 
         <div id="buttondiv" class="continue-button">
-          <button><a aria-disabled="true">Continuar</a></button>
+          <button id="botao"><a aria-disabled="true">Continuar</a></button>
         </div>
       </form>
     </div>
   </div>
-  <script src="./main.js"></script>
+  <script src="insc.js" type="module"></script>
 </body>
 
 </html>
