@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="popupstyle.css">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Formulário</title>
   </head>
 
@@ -17,7 +18,7 @@
         <img src="./assets/jifs-logo.png" alt="Logo do JIFS" />
       </div>
       <div class="form">
-        <form action="#" autocomplete="off">
+        <form action="#" autocomplete="off" id="formJog">
           <div class="form-header">
             <div class="title">
               <h1>Cadastrar Jogador</h1>
@@ -43,9 +44,11 @@
               <label for="number">Matrícula</label>
               <input
                 id="number"
-                type="tel"
+                type="number"
                 name="number"
                 placeholder="xxxxxxxxxx"
+                minlength="10"
+                maxlength="10"
                 required
               />
             </div>
@@ -81,7 +84,7 @@
             </div>
 
           <div id="buttondiv" class="continue-button">
-            <button id="botao"><a aria-disabled="true">Continuar</a></button>
+            <input type="submit" id="botao" value="Cadastrar">          
           </div>
         </div>
       </form>

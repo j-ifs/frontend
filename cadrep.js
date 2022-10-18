@@ -2,6 +2,14 @@ import {cadSuccess, cadError} from './popup.js'
 
 var formField = document.getElementById("formRep")
 
+$(document).ready(function(){
+  $("#number").keypress(function(){
+    if(this.value.length == 10){
+      return false;
+    }
+  })
+})
+
 function storeRequiriments(event){
 
   let usernameValue = document.getElementById("firstname").value
@@ -11,7 +19,7 @@ function storeRequiriments(event){
 
   event.preventDefault();
 
-  axios.post('/jifs/api/user/store.php', {
+  axios.post('api/user/store.php', {
     user:{ 
       role: "representante",
       username: usernameValue,
@@ -27,4 +35,4 @@ function storeRequiriments(event){
   });
 }
 
-document.getElementById("botao").addEventListener("click", storeRequiriments)
+formField.addEventListener("submit", storeRequiriments)

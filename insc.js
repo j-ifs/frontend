@@ -1,6 +1,6 @@
 import {cadSuccess, cadError} from './popup.js'
 
-var formField = document.getElementById("formRep")
+var formField = document.getElementById("formInsc")
 
 $(document).ready(function() {
   $('#jog').select2();
@@ -19,11 +19,11 @@ $(document).ready(function() {
   });
 });
 
-window.onload = function pegarJogador(event){
+window.onload = function pegarJogador(){
 
-  event.preventDefault();
+ 
 
-    axios.get('/jifs/api/student/index.php')
+    axios.get('api/student/index.php')
     .then(function (response){
         const data = response.data
         console.log(data)
@@ -37,7 +37,7 @@ window.onload = function pegarJogador(event){
         console.log("ERROR JOGADOR")
     })
 
-    axios.get('/jifs/api/sport/index.php')
+    axios.get('api/sport/index.php')
     .then(function (response){
       const data = response.data
       const select = document.getElementById("sport")
@@ -73,4 +73,4 @@ function inscreverJogador(event){
   });
 }
 
-document.getElementById("botao").addEventListener("click", inscreverJogador)
+formField.addEventListener("submit", inscreverJogador)

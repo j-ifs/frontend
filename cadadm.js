@@ -10,7 +10,7 @@ function cadAdm(event){
 
     event.preventDefault();
 
-    axios.post('/jifs/api/user/store.php', {
+    axios.post('api/user/store.php', {
       user:{
           role: "administrador",
           username: usernameValue,
@@ -25,4 +25,4 @@ function cadAdm(event){
       });
 }//
 
-document.getElementById("botao").addEventListener("click", cadAdm)
+formField.addEventListener("submit", cadAdm)
