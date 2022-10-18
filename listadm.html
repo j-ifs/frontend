@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="./stylelist.css">
+    <link rel="stylesheet" href="popupstyle.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Listar Administradores</title>
 </head>
 
@@ -24,16 +27,16 @@
           <table id="example" class="display" style="width:100%">
             <thead>
               <tr>
-                <th>Nome</th>
                 <th>Usuário</th>
+                <th>Cargo</th>
                 <th>Alterar</th>
                 <th>Excluir</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody id="tablebody">
                 <tr>
-                    <td>pedro</td>
-                    <td>pedroadm</td>
+                    <td></td>
+                    <td></td>
                     <td><a href="">Alterar</a></td>
                     <td><a href="">Excluir</a></td>
                 </tr>
@@ -136,6 +139,7 @@
         </button>
       </div>
     </nav>
+    <script src="listadm.js" type="module"></script>
 </body>
 
 </html>
