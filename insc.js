@@ -14,14 +14,10 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-  $('#sport').select2({
-    multiple:true
-  });
+  $('#sport').select2();
 });
 
 window.onload = function pegarJogador(){
-
- 
 
     axios.get('api/student/index.php')
     .then(function (response){
@@ -46,6 +42,9 @@ window.onload = function pegarJogador(){
         select.innerHTML += `<option value=${sport.id}>${sport.name}</option>`
       }
     })
+    .catch(function(error){
+      console.log("ERROR MODALIDADE")
+    })
     
 
 }
@@ -53,7 +52,7 @@ window.onload = function pegarJogador(){
 function inscreverJogador(event){
 
   let jogadorValue = document.getElementById("jog").value
-  let modalidadeValue = document.getElementsByName("sport").value
+  let modalidadeValue = document.querySelector("#sport").value
   let turmaValue = document.getElementById("turma").value
 
   event.preventDefault();

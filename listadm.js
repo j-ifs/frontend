@@ -5,7 +5,7 @@ window.onload = function listadm(){
       const table = document.getElementById("tablebody")
       table.innerHTML = " "
       for(let user of data.users){
-        if(user.role = "admnistrador"){
+        if(user.role === "administrador"){
           table.innerHTML += `<td>${user.username}</td>
           <td>${user.role}</td>
           <td><button value=${user.id} id=botao2>Alterar</button></td>

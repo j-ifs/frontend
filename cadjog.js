@@ -2,6 +2,13 @@ import {cadSuccess, cadError} from './popup.js'
 
 var formField = document.getElementById("formJog")
 
+$(document).ready(function() {
+  $('#turma').select2({
+    placeholder: "Selecione a turma do jogador",
+    allowClear: true
+  });
+});
+
 $(document).ready(function(){
   $("#number").keypress(function(){
     if(this.value.length == 10){

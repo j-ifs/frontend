@@ -10,8 +10,10 @@ function loginRequiriments(event){
   event.preventDefault();
 
   axios.post('api/user/login.php', {
+    user:{
     username: usernameValue,
     password: passwordValue
+    }
   })
   .then(function (response) {
     loginSuccess()

@@ -2,6 +2,13 @@ import {cadSuccess, cadError} from './popup.js'
 
 var formField = document.getElementById("formRep")
 
+$(document).ready(function() {
+  $('#turma').select2({
+    placeholder: "Selecione a turma do representante",
+    allowClear: true
+  });
+});
+
 $(document).ready(function(){
   $("#number").keypress(function(){
     if(this.value.length == 10){
