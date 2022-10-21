@@ -1,19 +1,22 @@
+import {delSuccess, delError} from './popup.js'
+
 window.onload = function listinsc(){
-    axios.get('/jifs/api/student/index.php')
+    axios.get('api/subscription/index.php')
     .then(function(response){
         const data = response.data
         const table = document.getElementById("tablebody")
         table.innerHTML = " "
-        for(let student of data.students){
-            table.innerHTML += `<tr><td>${student.name}</td>
-            <td>${student.registration}</td>
-            <td><button value=${user.id} id=botao2>Alterar</button></td>
-            <td><button value=${user.id} class=botaoexcluir id=botao3>Excluir</button></td>`;
+        for(let subscription of data.subscriptions){
+            table.innerHTML += `<tr><td>${subscription.student}</td>
+            <td>${subscription.sport}</td>
+            <td>${subscription.class}</td>
+            <td><button value=${subscription.id} id=botao2>Alterar</button></td>
+            <td><button value=${subscription.id} class=botaoexcluir id=botao3>Excluir</button></td>`;
         }
         function deletAdm(event) {
             let deleteButton = event.target.value
             console.log(deleteButton)
-            axios.delete(`api/user/destroy.php/${deleteButton}`, {
+            axios.delete(`api/subscription/destroy.php/${deleteButton}`, {
               })
               .then(function (response) {
                 delSuccess()

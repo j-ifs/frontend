@@ -17,7 +17,7 @@ window.onload = function listjog(){
         function deletJog(event) {
             let deleteButton = event.target.value
             console.log(deleteButton)
-            axios.delete(`api/student/destroy.php/${deleteButton}`, {
+            axios.delete(`api/studentg/destroy.php/${deleteButton}`, {
               })
               .then(function (response) {
                 delSuccess()

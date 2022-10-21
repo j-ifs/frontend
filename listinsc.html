@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="./stylelist.css">
+    <link rel="stylesheet" href="popupstyle.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Lista Inscrições</title>
 </head>
 
@@ -17,7 +20,7 @@
               <button><a href="./insc.html">Inscrever jogador</a></button>
             </div>
             <div class="voltar-button">
-              <button><a href="./mainadm.html">Voltar</a></button>
+              <button style="background-color: rgb(59, 59, 59)"><a href="./mainadm.html">Voltar</a></button>
             </div>
           </div>
           <br>
@@ -27,19 +30,17 @@
                 <th>Nome</th>
                 <th>Modalidade</th>
                 <th>Turma</th>
-                <th>Matricula</th>
                 <th>Alterar</th>
                 <th>Excluir</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody id="tablebody">
                 <tr>
-                    <td>pedro</td>
-                    <td>Futsal</td>
-                    <td>3º Informatica</td>
-                    <td>1234567899</td>
-                    <td><a href="">Alterar</a></td>
-                    <td><a href="">Excluir</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
             </tbody>
           </table>
@@ -140,7 +141,7 @@
           </div>
         </nav>
     </div>
-    
+    <script src="listinsc.js" type="module"></script>
 </body>
 
 </html>
