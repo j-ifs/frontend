@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 
 :root {
@@ -36,7 +35,7 @@ html {
 }
 
 body {
-  font-family: 'DM Sans';
+  font-family: 'Inter', sans-serif;
   font-size: 1.6rem;
 
   text-align: center;
@@ -63,7 +62,6 @@ img {
 section {
   padding-block: 10rem;
 }
-
 
 .button {
   background: var(--primary-color);
@@ -107,8 +105,6 @@ section {
   fill: var(--brand-beige);
 }
 
-
-
 button.open-menu path[stroke*='#00856F'],
 #contact li path {
   stroke: var(--primary-color);
@@ -137,7 +133,6 @@ nav {
   z-index: 100;
 
   transition: opacity 400ms;
-
 }
 
 nav .wrapper {
@@ -403,11 +398,11 @@ body.menu-expanded button path {
   }
 }
 
- #zzz {
+#zzz {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'DM Sans';
+  font-family: 'Inter', sans-serif;
   user-select: none;
 }
 
@@ -454,6 +449,7 @@ body {
   margin-bottom: 3rem;
   display: flex;
   justify-content: space-between;
+  gap: 7rem;
 }
 
 .voltar-button {
@@ -525,7 +521,7 @@ select {
 
 .input-box label,
 .title h6 {
-  font-size: 1.20rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #000000c0;
 }
@@ -550,7 +546,6 @@ select {
   margin: 0 0 0.6rem;
 }
 
-
 .sports-group {
   display: flex;
   row-gap: 0.6rem;
@@ -570,12 +565,12 @@ select {
 }
 
 .input label {
-  font-size: 1.30rem;
+  font-size: 1.3rem;
   font-weight: 600;
   color: #000000c0;
 }
 
-.continue-button input[type=submit] {
+.continue-button input[type='submit'] {
   width: 100%;
   margin-top: 2.5rem;
   border: none;
@@ -586,13 +581,13 @@ select {
   color: #fff;
 }
 
-.continue-button input[type=submit]:hover {
+.continue-button input[type='submit']:hover {
   background-color: hsl(123, 93%, 18%);
 }
 
-.continue-button input[type=submit] a {
+.continue-button input[type='submit'] a {
   text-decoration: none;
-  font-size: 1,49rem;
+  font-size: 1, 49rem;
   font-weight: 500;
   color: #fff;
 }
