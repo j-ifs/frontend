@@ -2,146 +2,61 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
-    <link rel="stylesheet" href="./stylelist.css">
-    <link rel="stylesheet" href="popupstyle.css">
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <title>Lista Inscrições</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="./stylelist.css">
+  <link rel="stylesheet" href="popupstyle.css">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <title>Lista Inscrições</title>
 </head>
 
 <body>
-        <div class="form">
-          <div class="gender-group">
-            <div class="voltar-button">
-              <button><a href="./insc.html">Inscrever jogador</a></button>
-            </div>
-            <div class="voltar-button">
-              <button style="background-color: rgb(59, 59, 59)"><a href="./mainadm.html">Voltar</a></button>
-            </div>
-          </div>
-          <br>
-          <table id="example" class="display" style="width:100%">
-            <thead>
-              <tr>
-                <th>Nome</th>
-                <th>Modalidade</th>
-                <th>Turma</th>
-                <th>Alterar</th>
-                <th>Excluir</th>
-              </tr>
-            </thead>
-            <tbody id="tablebody">
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </tbody>
-          </table>
-          <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-          <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-          <script>
-            $(document).ready(function () {
-              $('#example').DataTable();
-            })
-          </script>
-        </div>
-        <nav id="navigation">
-          <div class="wrapper">
-            <a class="logo" href="./mainadm.html">
-              <img src="./assets/ifs.png" width="175" height="50" alt="" />
-            </a>
-    
-            <div class="menu">
-              <ul>
-                <li>
-                  <a onclick="closeMenu()" href="./listadm.html">Administrador</a>
-                </li>
-                <li><a onclick="closeMenu()" href="./listjog.html">Jogador</a></li>
-                <li>
-                  <a onclick="closeMenu()" href="./listinsc.html">Inscrição</a>
-                </li>
-                <li>
-                  <a onclick="closeMenu()" href="./listrep.html">Representante</a>
-                </li>
-              </ul>
-    
-              <a
-                class="button"
-                onclick="closeMenu()"
-                href="./index.html"
-                >SAIR</a
-              >
-            </div>
-    
-            <button
-              aria-expanded="false"
-              aria-label="Abrir menu"
-              onclick="openMenu()"
-              class="open-menu"
-            >
-              <svg
-                width="40"
-                height="40"
-                viewBox="0 0 40 40"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M10 20H30"
-                  stroke="#00856F"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M10 12H30"
-                  stroke="#00856F"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M18 28L30 28"
-                  stroke="#00856F"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
-            <button
-              aria-expanded="true"
-              aria-label="Fechar menu"
-              onclick="closeMenu()"
-              class="close-menu"
-            >
-              <svg
-                width="40"
-                height="40"
-                viewBox="0 0 40 40"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M30 10L10 30M10 10L30 30"
-                  stroke="#FFFAF1"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
-        </nav>
+  <div id="nav"></div>
+  <div class="form">
+    <div class="gender-group">
+      <div class="voltar-button">
+        <button><a href="./insc.html">Inscrever jogador</a></button>
+      </div>
+      <div class="voltar-button">
+        <button style="background-color: rgb(59, 59, 59)"><a href="./mainadm.html">Voltar</a></button>
+      </div>
     </div>
-    <script src="listinsc.js" type="module"></script>
+    <br>
+    <table id="example" class="display" style="width:100%">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Modalidade</th>
+          <th>Turma</th>
+          <th>Alterar</th>
+          <th>Excluir</th>
+        </tr>
+      </thead>
+      <tbody id="tablebody">
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('#example').DataTable();
+      })
+    </script>
+  </div>
+  </div>
+  <script src="main.js"></script>
+  <script src="listinsc.js" type="module"></script>
+  <script src="routescript.js"></script>
 </body>
 
 </html>

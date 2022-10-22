@@ -1,146 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styleform.css">
-    <link rel="stylesheet" href="popupstyle.css">
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <title>Formulário</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./styleform.css">
+<link rel="stylesheet" href="popupstyle.css">
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<title>Formulário</title>
 </head>
 
 <body>
-    <nav id="navigation">
-        <div class="wrapper">
-          <a class="logo" href="mainadm.html">
-            <img src="./assets/ifs.png" width="175" height="50" alt="" />
-          </a>
-  
-          <div class="menu">
-            <ul>
-              <li>
-                <a onclick="closeMenu()" href="./listadm.html">Administrador</a>
-              </li>
-              <li><a onclick="closeMenu()" href="./listjog.html">Jogador</a></li>
-              <li>
-                <a onclick="closeMenu()" href="./listinsc.html">Inscrição</a>
-              </li>
-              <li>
-                <a onclick="closeMenu()" href="./listrep.html">Representante</a>
-              </li>
-              
-            </ul>
-  
-            <a
-              class="button"
-              onclick="closeMenu()"
-              href="./index.html"
-              >SAIR</a
-            >
-          </div>
-  
-          <button
-            aria-expanded="false"
-            aria-label="Abrir menu"
-            onclick="openMenu()"
-            class="open-menu"
-          >
-            <svg
-              width="40"
-              height="40"
-              viewBox="0 0 40 40"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M10 20H30"
-                stroke="#00856F"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M10 12H30"
-                stroke="#00856F"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M18 28L30 28"
-                stroke="#00856F"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </button>
-          <button
-            aria-expanded="true"
-            aria-label="Fechar menu"
-            onclick="closeMenu()"
-            class="close-menu"
-          >
-            <svg
-              width="40"
-              height="40"
-              viewBox="0 0 40 40"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M30 10L10 30M10 10L30 30"
-                stroke="#FFFAF1"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </button>
-        </div>
-      </nav>
-
-    <div class="container" id="zzz">
-        <div class="form-image">
-            <img src="./assets/jifs-logo.png" alt="Logo do JIFS">
-        </div>
-        <div class="form">
-            <form action="#" autocomplete="off" id="formAdm">
-                <div class="form-header">
-                    <div class="title">
-                        <h1>Cadastrar Administrador</h1>
-                    </div>
-                    <div class="voltar-button">
-                        <button disabled style="background-color: rgb(59, 59, 59)"><a href="./listadm.html">Voltar</a></button>
-                    </div>
-                </div>
-
-                <div class="input-group">
-                    <div class="input-box">
-                        <label for="firstname">Nome</label>
-                        <input id="firstname" type="text" name="firstname" placeholder="Digite o nome" required>
-                    </div>
-                     
-                    <div class="input-box">
-                        <label for="user">Usuário </label>
-                        <input id="user" type="text" name="email" placeholder="Digite o seu nome de usuário" required>
-                    </div>
-
-                    <div class="input-box">
-                        <label for="password">Senha</label>
-                        <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
-                    </div>
-                </div>
-                <div class="continue-button">
-                    <input type="submit" id="botao" value="Cadastrar">
-                </div>
-            </form>
-        </div>
+  <div id="nav"></div>
+  <div class="container" id="zzz">
+    <div class="form-image">
+      <img src="./assets/jifs-logo.png" alt="Logo do JIFS">
     </div>
+    <div class="form">
+      <form action="#" autocomplete="off" id="formAdm">
+        <div class="form-header">
+          <div class="title">
+            <h1>Cadastrar Administrador</h1>
+          </div>
+          <div class="voltar-button">
+            <button disabled style="background-color: rgb(59, 59, 59)"><a href="./listadm.html">Voltar</a></button>
+          </div>
+        </div>
 
-    
-    <script src="cadadm.js" type="module"></script>
+        <div class="input-group">
+          <div class="input-box">
+            <label for="firstname">Nome</label>
+            <input id="firstname" type="text" name="firstname" placeholder="Digite o nome" required>
+          </div>
+
+          <div class="input-box">
+            <label for="user">Usuário </label>
+            <input id="user" type="text" name="email" placeholder="Digite o seu nome de usuário" required>
+          </div>
+
+          <div class="input-box">
+            <label for="password">Senha</label>
+            <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
+          </div>
+        </div>
+        <div class="continue-button">
+          <input type="submit" id="botao" value="Cadastrar">
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="main.js"></script>
+  <script src="cadadm.js" type="module"></script>
+  <script src="routescript.js"></script>
 </body>
 
 </html>

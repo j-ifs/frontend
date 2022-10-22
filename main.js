@@ -1,92 +1,80 @@
-window.addEventListener('scroll', onScroll)
+navbar()
 
-onScroll()
+console.log(sessionStorage)
 
-function onScroll() {
-  showNavOnScroll()
-  activateMenuAtCurrentSection(home)
-  activateMenuAtCurrentSection(services)
-  activateMenuAtCurrentSection(about)
-  activateMenuAtCurrentSection(contact)
-}
-
-function enable() {
-  document.getElementById('outraturma').removeAttribute('disabled')
-  document.getElementById('outraturma').setAttribute('required', 'true')
-}
-
-function disable() {
-  document.getElementById('outraturma').setAttribute('disabled', 'true')
-  document.getElementById('outraturma').removeAttribute('required')
-  document.getElementById('outraturma').value = ('')
-}
-
-/*function activateMenuAtCurrentSection(section){
-  // ver se o topo da seção passou da linha
-  const targetLine = scrollY+ innerHeight / 2
-
-  // topo da seção
-  const sectionTop = section.offsetTop
-  // altura da seção
-  const sectionHeight = section.offsetHeight
-  // topo da seção chegou ou passou a linha alvo
-  const sectionTopReachOrPassedTargetline = targetLine >= sectionTop
-
-  // onde a seção termina
-  const sectionEndsAt = sectionTop + sectionHeight
-
-  // ver se a base da seção passou da linha
-  const sectionEndPassedTargetline = sectionEndsAt <= targetLine
-
-  // limites da seção
-  const sectionBoundaries =
-    sectionTopReachOrPassedTargetline && !sectionEndPassedTargetline
-
-  const sectionId = section.getAttribute('id')
-  const menuElement = document.querySelector(`.menu a[href*=${sectionId}]`)
-
-  // se passou do fim da seção e do topo da proxima
-  menuElement.classList.remove('active')
-  if (sectionBoundaries) {
-    menuElement.classList.add('active')
+function navbar() {
+  if (sessionStorage.getItem('user') === 'administrador') {
+    nav.innerHTML = `<nav id="navigation">
+          <div class="wrapper">
+            <a class="logo" href="./main.html">
+              <img src="./assets/ifs.png" width="175" height="50" alt="" />
+            </a>
+        
+            <div class="menu">
+              <ul>
+                <li>
+                  <a onclick="closeMenu()" href="./listadm.html">Administrador</a>
+                </li>
+                <li><a onclick="closeMenu()" href="./listjog.html">Jogador</a></li>
+                <li>
+                  <a onclick="closeMenu()" href="./listinsc.html">Inscrição</a>
+                </li>
+                <li>
+                  <a onclick="closeMenu()" href="./listrep.html">Representante</a>
+                </li>
+        
+              </ul>
+        
+              <a class="button" onclick="closeMenu()" href="./index.html">SAIR</a>
+            </div>
+        
+            <button aria-expanded="false" aria-label="Abrir menu" onclick="openMenu()" class="open-menu">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 20H30" stroke="#00856F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M10 12H30" stroke="#00856F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M18 28L30 28" stroke="#00856F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <button aria-expanded="true" aria-label="Fechar menu" onclick="closeMenu()" class="close-menu">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30 10L10 30M10 10L30 30" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+    </nav>`
+  } else if (sessionStorage.getItem('user') === 'representante') {
+    nav.innerHTML = `<nav id="navigation">
+          <div class="wrapper">
+            <a class="logo" href="./main.html">
+              <img src="./assets/ifs.png" width="175" height="50" alt="" />
+            </a>
+        
+            <div class="menu">
+              <ul>
+                <li><a onclick="closeMenu()" href="./listjog.html">Jogador</a></li>
+                <li>
+                  <a onclick="closeMenu()" href="./listinsc.html">Inscrição</a>
+                </li>
+              </ul>
+        
+              <a class="button" onclick="closeMenu()" href="./index.html">SAIR</a>
+            </div>
+        
+            <button aria-expanded="false" aria-label="Abrir menu" onclick="openMenu()" class="open-menu">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 20H30" stroke="#00856F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M10 12H30" stroke="#00856F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M18 28L30 28" stroke="#00856F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <button aria-expanded="true" aria-label="Fechar menu" onclick="closeMenu()" class="close-menu">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30 10L10 30M10 10L30 30" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+    </nav>`
   }
-
-
-
-  console.log(sectionBoundaries)
-}*/
-
-function showNavOnScroll() {
-  if (scrollY > 0) {
-    navigation.classList.add('scroll')
-  } else {
-    navigation.classList.remove('scroll')
-  }
 }
-
-function openMenu() {
-  document.body.classList.add('menu-expanded')
-}
-
-function closeMenu() {
-  document.body.classList.remove('menu-expanded')
-}
-
-ScrollReveal({
-  origin: 'top',
-  distance: '30px',
-  duration: 700
-}).reveal(`
-#home,  
-#home img, 
-#home .stats, 
-#services,
-#serices header,
-#services .card,
-#about,
-#about header,
-#about .content
-#contact,
-#contact header,
-#about .content
-`)

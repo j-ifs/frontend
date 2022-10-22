@@ -16,95 +16,7 @@
 </head>
 
 <body>
-  <nav id="navigation">
-    <div class="wrapper">
-      <a class="logo" href="mainadm.html">
-        <img src="./assets/ifs.png" width="175" height="50" alt="" />
-      </a>
-
-      <div class="menu">
-        <ul>
-          <li>
-            <a onclick="closeMenu()" href="./listadm.html">Administrador</a>
-          </li>
-          <li><a onclick="closeMenu()" href="./listjog.html">Jogador</a></li>
-          <li>
-            <a onclick="closeMenu()" href="./listinsc.html">Inscrição</a>
-          </li>
-          <li>
-            <a onclick="closeMenu()" href="./listrep.html">Representante</a>
-          </li>
-          
-        </ul>
-
-        <a
-          class="button"
-          onclick="closeMenu()"
-          href="./index.html"
-          >SAIR</a
-        >
-      </div>
-
-      <button
-        aria-expanded="false"
-        aria-label="Abrir menu"
-        onclick="openMenu()"
-        class="open-menu"
-      >
-        <svg
-          width="40"
-          height="40"
-          viewBox="0 0 40 40"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M10 20H30"
-            stroke="#00856F"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M10 12H30"
-            stroke="#00856F"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M18 28L30 28"
-            stroke="#00856F"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </button>
-      <button
-        aria-expanded="true"
-        aria-label="Fechar menu"
-        onclick="closeMenu()"
-        class="close-menu"
-      >
-        <svg
-          width="40"
-          height="40"
-          viewBox="0 0 40 40"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M30 10L10 30M10 10L30 30"
-            stroke="#FFFAF1"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </button>
-    </div>
-  </nav>
+  <div id="nav"></div>
   <div class="container" id="zzz">
     <div class="form-image">
       <img src="./assets/jifs-logo.png" alt="Logo do JIFS" />
@@ -134,27 +46,27 @@
           <div class="title">
             <h6>Turma</h6>
           </div>
-            <select id="turma" name="turma" class="turma">
-              <option></option>
-              <option value="1IINF">1º Informática</option>
-              <option value="2IINF">2º Informática</option>
-              <option value="3IINF">3º Informática</option>
-              <option value="1IQUI">1º Química</option>
-              <option value="2IQUI">2º Química</option>
-              <option value="3IQUI">3º Química</option>
-              <option value="1IELN">1º Eletrônica</option>
-              <option value="2IELN">2º Eletrônica</option>
-              <option value="3IELN">3º Eletrônica</option>
-              <option value="1IELT">1º Eletrotécnica</option>
-              <option value="2IELT">2º Eletrotécnica</option>
-              <option value="3IELT">3º Eletrotécnica</option>
-              <option value="1IEDF">1º Edificações</option>
-              <option value="2IEDF">2º Edificações</option>
-              <option value="3IEDF">3º Edificações</option>
-              <option value="1IALM">1º Alimentos</option>
-              <option value="2IALM">2º Alimentos</option>
-              <option value="3IALM">3º Alimentos</option>
-            </select>
+          <select id="turma" name="turma" class="turma">
+            <option></option>
+            <option value="1IINF">1º Informática</option>
+            <option value="2IINF">2º Informática</option>
+            <option value="3IINF">3º Informática</option>
+            <option value="1IQUI">1º Química</option>
+            <option value="2IQUI">2º Química</option>
+            <option value="3IQUI">3º Química</option>
+            <option value="1IELN">1º Eletrônica</option>
+            <option value="2IELN">2º Eletrônica</option>
+            <option value="3IELN">3º Eletrônica</option>
+            <option value="1IELT">1º Eletrotécnica</option>
+            <option value="2IELT">2º Eletrotécnica</option>
+            <option value="3IELT">3º Eletrotécnica</option>
+            <option value="1IEDF">1º Edificações</option>
+            <option value="2IEDF">2º Edificações</option>
+            <option value="3IEDF">3º Edificações</option>
+            <option value="1IALM">1º Alimentos</option>
+            <option value="2IALM">2º Alimentos</option>
+            <option value="3IALM">3º Alimentos</option>
+          </select>
         </div>
 
         <div class="title">
@@ -163,7 +75,7 @@
 
         <div class="turma-group">
           <select name="sport" id="sport" class="sport">
-            
+
           </select>
         </div>
 
@@ -173,7 +85,9 @@
       </form>
     </div>
   </div>
+  <script src="main.js"></script>
   <script src="insc.js" type="module"></script>
+  <script src="routescript.js"></script>
 </body>
 
 </html>
