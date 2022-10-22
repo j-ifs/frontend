@@ -28,8 +28,9 @@ function storeRequiriments(event){
 
   axios.post('api/user/store.php', {
     user:{ 
+      name: usernameValue,
       role: "representante",
-      username: usernameValue,
+      username: numberValue,
       password: passwordValue,
       class: turmaValue
     }

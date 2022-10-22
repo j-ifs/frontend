@@ -12,6 +12,7 @@ function cadAdm(event){
 
     axios.post('api/user/store.php', {
       user:{
+          name: nameValue,
           role: "administrador",
           username: usernameValue,
           password: passwordValue 

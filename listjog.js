@@ -10,7 +10,7 @@ window.onload = function listjog(){
             table.innerHTML += `<tr><td>${student.name}</td>
             <td>${student.registration}</td>
             <td>${student.birthdate}</td>
-            <td>${student.class}</td>
+            <td>${student.class.id}</td>
             <td><button value=${student.id} id=botao2>Alterar</button></td>
             <td><button value=${student.id} class=botaoexcluir id=botao3>Excluir</button></td>`;
         }

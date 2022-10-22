@@ -8,7 +8,8 @@ window.onload = function listadm(){
       table.innerHTML = " "
       for(let user of data.users){
         if(user.role === "administrador"){
-          table.innerHTML += `<td>${user.username}</td>
+          table.innerHTML += `<td>${user.name}</td>
+          <td>${user.username}</td>
           <td>${user.role}</td>
           <td><button value=${user.id} id=botao2>Alterar</button></td>
           <td><button value=${user.id} class=botaoexcluir id=botao3>Excluir</button></td>`;
