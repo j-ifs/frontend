@@ -50,7 +50,7 @@ function navbar() {
               <img src="./assets/ifs.png" width="175" height="50" alt="" />
             </a>
         
-            <div class="menu">
+            <div class="menu" style = "width: 55%;">
               <ul>
                 <li><a onclick="closeMenu()" href="./listjog.html">Jogador</a></li>
                 <li>

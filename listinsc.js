@@ -1,7 +1,7 @@
 import {delSuccess, delError} from './popup.js'
 
 window.onload = function listinsc(){
-    axios.get('api/subscription/index.php')
+    /*axios.get('api/subscription/index.php')
     .then(function(response){
         const data = response.data
         const table = document.getElementById("tablebody")
@@ -33,5 +33,19 @@ window.onload = function listinsc(){
          for(let botaodel of deleteButton){
           botaodel.addEventListener("click", deletAdm)
          }
+    })*/
+    axios.get('api/subscription/index.php')
+    .then(function(response){
+      const data = response.data
+      console.log(data)
+      $('#example').DataTable( {
+        //"ajax": "data/objects.txt",
+        "data":data.subscriptions,
+        "columns": [
+            { "data": "student.name" },
+            { "data": "sport.name" },
+            { "data": "class.id" },
+        ]
+    } );
     })
 }

@@ -14,14 +14,14 @@
 </head>
 
 <body>
-  <div id="nav"></div>
+  <div id="nav" class="nav"></div>
   <div class="form">
     <div class="gender-group">
       <div class="voltar-button">
         <button><a href="./cadjog.html">Cadastrar jogador</a></button>
       </div>
       <div class="voltar-button">
-        <button style="background-color: rgb(59, 59, 59)"><a href="./mainadm.html">Voltar</a></button>
+        <button style="background-color: rgb(59, 59, 59)"><a href="./main.html">Voltar</a></button>
       </div>
     </div>
     <br>
@@ -36,24 +36,9 @@
           <th>Excluir</th>
         </tr>
       </thead>
-      <tbody id="tablebody">
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tbody>
     </table>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        $('#example').DataTable();
-      })
-    </script>
   </div>
   <script src="main.js"></script>
   <script src="listjog.js" type="module"></script>
