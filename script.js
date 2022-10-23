@@ -19,18 +19,12 @@ function loginRequiriments(event) {
       loginSuccess()
       sessionStorage.setItem('logged', 'true')
       location.href = 'main.html'
-      axios.get('api/user/index.php', {})
-      .then(function (response) {
-        const data = response.data
-        const nav = document.getElementById('nav')
-        for (let user of data.users) {
-          if (user.role === 'administrador') {
-            sessionStorage.setItem('user', 'administrador')
-          } else if (user.role === 'representante') {
-            sessionStorage.setItem('user', 'representante')
-          }
-        }
-      })
+      let role = response.data.user.role
+      if (role === 'administrador') {
+        sessionStorage.setItem('user', 'administrador')
+      } else if (role === 'representante') {
+        sessionStorage.setItem('user', 'representante')
+      }
     })
     .catch(function (error) {
       loginError()
