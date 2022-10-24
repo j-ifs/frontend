@@ -47,11 +47,11 @@ window.onload = function listadm(){
   
   axios.get('api/user/index.php')
     .then(function(response){
-      const data = response.data
-      console.log(data)
+      const data = response.data.users
+      const adms = data.filter(adm => adm.role === "administrador");
       $('#example').DataTable( {
         //"ajax": "data/objects.txt",
-        "data":data.users,
+        "data":adms,
         "columns": [
             { "data": "name" },
             { "data": "username" },

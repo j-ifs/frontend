@@ -47,15 +47,16 @@ window.onload = function listrep(){
     })*/
     axios.get('api/user/index.php')
     .then(function(response){
-      const data = response.data
-      console.log(data)
+      const data = response.data.users
+      const reps = data.filter(rep => rep.role === "representante");
       $('#example').DataTable( {
         //"ajax": "data/objects.txt",
-        "data":data.users,
+        "data":reps,
         "columns": [
             { "data": "name" },
             { "data": "username" },
-            { "data": "role" },
+            { "data": "class" },
+            { "data": "role"}
         ]
     } );
     })
