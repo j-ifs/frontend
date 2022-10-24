@@ -1,5 +1,13 @@
 import {delSuccess, delError} from './popup.js'
 
+redirectrep()
+
+function redirectrep() {
+  if (sessionStorage.getItem('user') != 'administrador') {
+    location.replace('main.html')
+  }
+}
+
 window.onload = function listrep(){
     /*axios.get('api/user/index.php')
     .then(function(response){

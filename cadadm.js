@@ -1,5 +1,13 @@
 import {cadSuccess, cadError} from './popup.js'
 
+redirectrep()
+
+function redirectrep() {
+  if (sessionStorage.getItem('user') != 'administrador') {
+    location.replace('main.html')
+  }
+}
+
 var formField = document.getElementById("formAdm")
 
 

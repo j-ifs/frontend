@@ -25,7 +25,7 @@ function navbar() {
         
               </ul>
         
-              <a class="button" onclick="closeMenu()" href="./index.html">SAIR</a>
+              <a class="button" onclick="deletecookie()" href="./index.html">SAIR</a>
             </div>
         
             <button aria-expanded="false" aria-label="Abrir menu" onclick="openMenu()" class="open-menu">
@@ -58,7 +58,7 @@ function navbar() {
                 </li>
               </ul>
         
-              <a class="button" onclick="closeMenu()" href="./index.html">SAIR</a>
+              <a class="button" onclick="deletecookie()" href="./index.html">SAIR</a>
             </div>
         
             <button aria-expanded="false" aria-label="Abrir menu" onclick="openMenu()" class="open-menu">
