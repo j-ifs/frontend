@@ -161,10 +161,10 @@ nav {
   display: flex;
 
   height: var(--nav-height);
-
+  
   position: fixed;
   top: 0;
-  width: 100vw;
+  width: 51vw;
 
   z-index: 100;
 
